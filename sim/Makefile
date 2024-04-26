@@ -9,9 +9,8 @@ SIM_DIR := $(REPO_DIR)/sim
 SIM ?= verilator
 
 # EXTRA_ARGS += --timing
-EXTRA_ARGS += --coverage
+# EXTRA_ARGS += --coverage
 EXTRA_ARGS += --trace --trace-structs
-
 
 TOPLEVELLANG ?= verilog
 
