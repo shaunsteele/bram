@@ -28,14 +28,11 @@ end
 // Read Interface
 always_ff @(posedge clk) begin
   if (!rstn) begin
-    mem.rvalid <= 0;
     mem.rdata <= 0;
   end else begin
     if (mem.ren) begin
-      mem.rvalid <= 1;
       mem.rdata <= ram[mem.raddr];
     end else begin
-      mem.rvalid <= 0;
       mem.rdata <= mem.rdata;
     end
   end
